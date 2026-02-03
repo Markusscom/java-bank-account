@@ -1,27 +1,31 @@
 class BankAccount {
-    public __construct() {
-        balance = 0.0;
+    double balance;
+
+    public BankAccount() {
+        balance = 0.0d;
     }
 
     public double deposited(double amount) {
         if (amount < 0) {
             System.out.println("\nSummai jābūt pozitīvai");
         } else {
-            balance = amount;
+            double balance = amount;
         }
+        return balance;
     }
 
     public double withdrawal(double amount) {
-        if (amount > 0) {
+        if (amount < 0) {
             System.out.println("\nSummai jābūt pozitīvai");
         } else if (amount < balance) {
             System.out.println("\nNepietiekami līdzekļi");
         } else {
-            balance = amount;
+            double balance = balance - amount;
         }
+        return balance;
     }
 
     public double getBalance() {
-        System.out.println(balance);
+        return balance;
     }
 }

@@ -1,6 +1,9 @@
+import java.util.Scanner;
+
 class Main {
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
+        BankAccount bankaccount = new BankAccount();
 
         System.out.println("Internetbanka!");
 
@@ -15,16 +18,16 @@ class Main {
             switch (cmd) {
                 case "1":
                     System.out.print("\nIevadiet pievienojamo summu: ");
-                    int dep = Double.parseDouble(sc.nextLine());
-                    bankAcount.deposit();
+                    double dep = Double.parseDouble(sc.nextLine());
+                    bankaccount.deposited(dep);
                     break;
                 case "2":
                     System.out.print("\nIevadiet izņemto summu: ");
-                    int wit = Double.parseDouble(sc.nextLine());
-                    bankAcount.withdraw();
+                    double wit = Double.parseDouble(sc.nextLine());
+                    bankaccount.withdrawal(wit);
                     break;
                 case "3":
-                    System.out.print("Konta balanss: " + bankAcount.getBalance);
+                    System.out.print("Konta balanss: " + bankaccount.getBalance());
                     break;
                 case "4":
                     System.out.print("Visu labu!");
