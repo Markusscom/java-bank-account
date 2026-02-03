@@ -17,7 +17,7 @@ class BankAccount {
     public double withdrawal(double amount) {
         if (amount < 0) {
             System.out.println("\nSummai jābūt pozitīvai");
-        } else if (amount < balance) {
+        } else if (amount > balance) {
             System.out.println("\nNepietiekami līdzekļi");
         } else {
             balance = balance - amount;
