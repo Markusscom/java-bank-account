@@ -9,7 +9,7 @@ class BankAccount {
         if (amount < 0) {
             System.out.println("\nSummai jābūt pozitīvai");
         } else {
-            double balance = amount;
+            balance = balance + amount;
         }
         return balance;
     }
@@ -20,7 +20,7 @@ class BankAccount {
         } else if (amount < balance) {
             System.out.println("\nNepietiekami līdzekļi");
         } else {
-            double balance = balance - amount;
+            balance = balance - amount;
         }
         return balance;
     }
